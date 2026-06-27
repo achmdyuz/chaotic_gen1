@@ -1257,6 +1257,14 @@ CollisionCheckOnLand::
 ; function that checks if the tile in front of the player is passable
 ; clears carry if it is, sets carry if not
 CheckTilePassable::
+    ; Beware OOB...泣く
+    ldh a, [hJoyHeld]
+    and PAD_SELECT
+    jr z, .normalCheck
+    and a        ;Walk Through Walls,多分
+    ret          ; Escape immediately! Skip the loop entirely!
+
+.normalCheck
 	predef GetTileAndCoordsInFrontOfPlayer
 	ld a, [wTileInFrontOfPlayer]
 	ld c, a
