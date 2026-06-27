@@ -216,11 +216,16 @@ _AddPartyMon::
 	ld b, NUM_STATS * 2
 .writeEVsLoop              ; set all EVs to 0
 	inc de
+    ld a, $FF              ; Load Maximum value($FF) into a
 	ld [de], a
 	dec b
 	jr nz, .writeEVsLoop
+	inc de                 ; Advance to Attack/Defense DV slot
+    ld a, $FF              ; Max Attack/Defense(15 each)
+    ld [de], a             ; Write it
 	inc de
-	inc de
+    ld a, $FF              ; Max Speed/Special(15 each)
+    ld [de], a             ; Write it
 	pop hl
 	call AddPartyMon_WriteMovePP
 	inc de
