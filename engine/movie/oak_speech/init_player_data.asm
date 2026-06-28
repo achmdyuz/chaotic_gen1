@@ -45,6 +45,39 @@ DEF START_MONEY EQU $3000
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags
 	call FillMemory ; clear all game progress flags
 
+	; Items Starter Pack(relative safe static item injection)
+    ld a, 5                 ; Injecting 5 items
+    ld [wNumBagItems], a    ; Set total bag count explicitly
+
+    ld hl, wBagItems
+
+    ld [hl], BICYCLE        ; Slot 1: Item ID
+    inc hl
+    ld [hl], 1              ; Slot 1: Quantity
+    inc hl
+
+    ld [hl], MASTER_BALL    ; Slot 2: Item ID
+    inc hl
+    ld [hl], 99              ; Slot 2: Quantity
+    inc hl
+
+    ld [hl], MAX_REPEL      ; Slot 3: Item ID
+    inc hl
+    ld [hl], 99              ; Slot 3: Quantity
+    inc hl
+
+    ld [hl], LEMONADE      ; Slot 4: Item ID
+    inc hl
+    ld [hl], 1              ; Slot 4: Quantity
+    inc hl
+
+    ld [hl], RARE_CANDY      ; Slot 5: Item ID
+    inc hl
+    ld [hl], 99              ; Slot 5: Quantity
+    inc hl
+
+    ld [hl], $ff            ; Place the hard stop terminator safely at the end!
+
 	jp InitializeToggleableObjectsFlags
 
 InitializeEmptyList:
