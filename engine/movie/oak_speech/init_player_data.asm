@@ -83,6 +83,10 @@ DEF START_MONEY EQU $3000
     ld [wTownVisitedFlag], a
     ld [wTownVisitedFlag + 1], a
 
+    ; All Badges except Earth Badge
+    ld a, ~(1 << BIT_EARTHBADGE)
+    ld [wObtainedBadges], a
+
 	jp InitializeToggleableObjectsFlags
 
 InitializeEmptyList:
