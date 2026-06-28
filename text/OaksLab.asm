@@ -27,8 +27,8 @@ _OaksLabThoseArePokeBallsText::
 
 _OaksLabYouWantCharmanderText::
 	text "So! You want the"
-	line "fire #MON,"
-	cont "CHARMANDER?"
+	line "dna-modified #MON,"
+	cont "MEWTWO?"
 	done
 
 _OaksLabYouWantSquirtleText::
