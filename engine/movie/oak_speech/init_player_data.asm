@@ -45,6 +45,10 @@ DEF START_MONEY EQU $3000
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags
 	call FillMemory ; clear all game progress flags
 
+    ; All Badges except Earth Badge
+    ld a, ~(1 << BIT_EARTHBADGE)
+    ld [wObtainedBadges], a
+
 	jp InitializeToggleableObjectsFlags
 
 InitializeEmptyList:
