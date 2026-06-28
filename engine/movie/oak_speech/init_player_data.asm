@@ -45,6 +45,12 @@ DEF START_MONEY EQU $3000
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags
 	call FillMemory ; clear all game progress flags
 
+    ; Fly anywhere
+    dec a ; $ff (all bits)
+    ld a, $ff
+    ld [wTownVisitedFlag], a
+    ld [wTownVisitedFlag + 1], a
+
 	jp InitializeToggleableObjectsFlags
 
 InitializeEmptyList:
