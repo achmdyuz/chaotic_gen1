@@ -45,7 +45,6 @@ DEF START_MONEY EQU $3000
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags
 	call FillMemory ; clear all game progress flags
 
-<<<<<<< HEAD
 	; Items Starter Pack(relative safe static item injection)
     ld a, 5                 ; Injecting 5 items
     ld [wNumBagItems], a    ; Set total bag count explicitly
