@@ -1,6 +1,6 @@
 ItemPrices::
 	table_width 3
-	bcd3 0     ; MASTER_BALL
+	bcd3 1     ; MASTER_BALL
 	bcd3 1200  ; ULTRA_BALL
 	bcd3 600   ; GREAT_BALL
 	bcd3 200   ; POKE_BALL
@@ -15,7 +15,7 @@ ItemPrices::
 	bcd3 250   ; ICE_HEAL
 	bcd3 200   ; AWAKENING
 	bcd3 200   ; PARLYZ_HEAL
-	bcd3 3000  ; FULL_RESTORE
+	bcd3 1  ; FULL_RESTORE
 	bcd3 2500  ; MAX_POTION
 	bcd3 1500  ; HYPER_POTION
 	bcd3 700   ; SUPER_POTION
@@ -28,7 +28,7 @@ ItemPrices::
 	bcd3 0     ; MARSHBADGE
 	bcd3 0     ; VOLCANOBADGE
 	bcd3 0     ; EARTHBADGE
-	bcd3 550   ; ESCAPE_ROPE
+	bcd3 1   ; ESCAPE_ROPE
 	bcd3 350   ; REPEL
 	bcd3 0     ; OLD_AMBER
 	bcd3 2100  ; FIRE_STONE
@@ -48,7 +48,7 @@ ItemPrices::
 	bcd3 950   ; X_ACCURACY
 	bcd3 2100  ; LEAF_STONE
 	bcd3 0     ; CARD_KEY
-	bcd3 10000 ; NUGGET
+	bcd3 99999 ; NUGGET
 	bcd3 9800  ; ITEM_32
 	bcd3 1000  ; POKE_DOLL
 	bcd3 600   ; FULL_HEAL
@@ -56,12 +56,12 @@ ItemPrices::
 	bcd3 4000  ; MAX_REVIVE
 	bcd3 700   ; GUARD_SPEC
 	bcd3 500   ; SUPER_REPEL
-	bcd3 700   ; MAX_REPEL
+	bcd3 1   ; MAX_REPEL
 	bcd3 650   ; DIRE_HIT
-	bcd3 10    ; COIN
+	bcd3 1    ; COIN
 	bcd3 200   ; FRESH_WATER
 	bcd3 300   ; SODA_POP
-	bcd3 350   ; LEMONADE
+	bcd3 1   ; LEMONADE
 	bcd3 0     ; S_S_TICKET
 	bcd3 0     ; GOLD_TEETH
 	bcd3 500   ; X_ATTACK
@@ -82,7 +82,7 @@ ItemPrices::
 	bcd3 0     ; ETHER
 	bcd3 0     ; MAX_ETHER
 	bcd3 0     ; ELIXER
-	bcd3 0     ; MAX_ELIXER
+	bcd3 1     ; MAX_ELIXER
 	assert_table_length NUM_ITEMS
 	bcd3 0     ; FLOOR_B2F
 	bcd3 0     ; FLOOR_B1F
